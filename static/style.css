@@ -1,0 +1,327 @@
+body {
+    padding: 0px;
+    background: #fdfbf3;
+    color: #3b3b3b;
+    font-size: 200%;
+    font-family: "Noto Sans JP", "sans-serif";
+    overflow-x: hidden;
+    margin: 0px;
+    user-select: none;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    position: relative;
+    text-align: left;
+    width: 40%;
+}
+
+table th:after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 20px;
+}
+
+table td {
+    text-align: left;
+    width: 85%;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    padding: 0.3em;
+    background: none;
+    height: 2.3em;
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 110%;
+    border: solid 1px #3b3b3b;
+}
+
+.input {
+    padding: 0.3em;
+    background: none;
+    height: 2.3em;
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 110%;
+    border: solid 1px #3b3b3b;
+}
+
+.disable,
+.disable * {
+    animation-name: none!important;
+    color: #919191;
+    border-color: #919191!important;
+    cursor: default;
+}
+
+#hint_wrap .disable .box_inner:after {
+    content: "";
+}
+
+* {
+    font-family: "Noto Sans JP";
+}
+
+#time_wrap {
+    padding-left: 23%;
+}
+
+#hint_wrap .box {
+    float: left;
+    width: 22%;
+    /*height: 8%;*/
+    margin-right: 2%;
+}
+
+#hint_wrap .container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#hint_wrap .box .box_title {
+    height: 3em;
+    font-size: 60%;
+}
+
+.box {
+    cursor: pointer;
+    width: max-content;
+    height: auto;
+    border: solid 1px #3b3b3b;
+    text-decoration: none;
+}
+
+.box:hover {
+    animation-name: select_animation;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.box_title {
+    font-weight: 500;
+    font-size: 80%;
+    border-bottom: solid 1px #3b3b3b;
+    padding: 5%;
+}
+
+.box_inner {
+    font-weight: 500;
+    font-size: 50%;
+    padding: 5%;
+}
+
+#hint {
+    width: 140%;
+}
+
+.select {
+    margin-bottom: 5%;
+}
+
+.option {
+    display: block;
+    padding: 1%;
+    border-bottom: solid 1px #3b3b3b;
+    border-right: solid 1px #3b3b3b;
+    border-left: solid 1px #3b3b3b;
+    background: #3b3b3b;
+}
+
+.option:hover {
+    cursor: pointer;
+    animation-name: select_animation;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+.option {
+    background: #fdfbf3;
+    color: #3b3b3b;
+}
+
+input[type="radio"]:checked+.option {
+    background: #3b3b3b;
+    color: #fdfbf3;
+}
+
+p {
+    font-size: 60%
+}
+
+iframe {
+    height: 300vh;
+    width: 250%;
+    border: 0px;
+    overflow: hidden;
+}
+
+#wrapper {
+    height: 100vh;
+}
+
+h3 {
+    padding: 1%;
+    margin: 0px;
+    font-weight: 700;
+}
+
+#header {
+    width: 100%;
+    border-bottom: solid 3px #3b3b3b;
+    padding: 2%;
+}
+
+#right {
+    padding: 1%;
+    height: 100vh;
+    /**width: 27%;*/
+    float: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    animation-name: select_animation;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes select_animation {
+    0% {
+        background: #fdfbf3;
+        color: #3b3b3b;
+    }
+    100% {
+        background: #3b3b3b;
+        color: #fdfbf3;
+    }
+}
+
+#left {
+    margin: 0px;
+    width: 25%;
+    float: left;
+}
+
+li {
+    margin: 0px;
+    padding: 8%;
+    border-bottom: solid 3px #3b3b3b;
+    border-right: solid 3px #3b3b3b;
+}
+
+ol li:not(:last-child):hover {
+    cursor: pointer;
+    animation-name: select_animation;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+ol {
+    height: 300vh;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    flex: 1 1 100%;
+}
+
+#agree {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+b {
+    text-decoration: none!important;
+    font-weight: 800;
+    color: #00a8db;
+}
+
+s {
+    text-decoration: none!important;
+    font-weight: 800;
+    color: #ff57cd;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 5%;
+    font-size: 110%;
+    text-align: center;
+    border: solid 1px #3b3b3b;
+}
+
+select {
+    padding-left: 2%;
+    margin-bottom: 5%;
+    height: 10%;
+    width: 100%;
+    outline: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    background: none transparent;
+    vertical-align: middle;
+    font-size: if;
+    color: inherit;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border: solid 1px #3b3b3b;
+}
+
+select option {
+    background-color: #fff;
+    color: #333;
+    height: 5%;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #828c9a;
+}

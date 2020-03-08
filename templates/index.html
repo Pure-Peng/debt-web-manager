@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>マイページ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body style="padding: 3%">
+    <div id="main">
+        <h3>{{ group }} のお金の状況</h3>
+        <table style="padding: 7%">
+            {% for i in user_debt %}
+            <tr>
+                <th>{{ i["name"] }}</th>
+                <td>{{ i["total"] }}</td>
+                <!--<td>debt
+                    <!-- jsにて実装の方がよいかと 
+                </td>-->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div id="account_data">
+        <table style="padding: 7%">
+            {{ username }} belongs to ... {% for i in user_group %}
+            <a href="group?name={{i}}">{{ i }}</a><span style="margin: 2%"></span> {% endfor %}
+        </table>
+    </div>
+</body>
